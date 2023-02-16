@@ -7,18 +7,15 @@ namespace CarLotSimulator
 	{
 		public CarLot()
 		{
+			
 		}
-		public static List<Car> MyList = new List<Car>();
-
-		public static void AddCar(Car newCar)
+		public static int numberOfCars;
+		public List<Car> MyList = new List<Car>();
+		public void PrintCars()
 		{
-			MyList.Add(newCar);
-		}
-		public static void PrintCars()
-		{
-			foreach (Car item in MyList)
+			foreach (Car car in MyList)
 			{
-				Console.WriteLine($"{item.Year}, {item.Make} {item.Model}");
+				Console.WriteLine($"{car.Year} {car.Make}, {car.Model}");
 			}
 		}
 	}
